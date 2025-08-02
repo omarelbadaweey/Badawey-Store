@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="auto">
+<head>
+  <meta charset="UTF-8">
+  <title>apple watch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/all.css">
+  <link rel="stylesheet" href="src/input.css">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.jpg">
+  <!-- Tailwind CSS CDN -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body class="min-h-screen">
+  <!-- Header -->
+  <header dir="auto" class=" h-[80px] bg-black sticky top-0 left-0 overflow-hidden z-[1000]">
+    <div class="container mx-auto capitalize text-white flex items-center justify-between w-[80%] h-[100%]">
+      <a href="index.html"><img src="img/logo.jpg" alt="" class="h-[80px]" title="Badawey Store"></a>
+      <div class="parent flex items-center">
+        <ul class="IconNav lg:hidden! mr-5 ">
+          <span></span>
+          <span></span>
+          <span></span>
+        </ul><!-- IconNav -->
+        <nav class="navBar p-5 space-y-3 lg:space-y-0 lg:p-0 lg:h-full bg-black lg:bg-transparent flex left-0 fixed top-[4.5rem] lg:translate-x-[none] translate-x-[100%] mx-auto w-[100%]! lg:w-auto! lg:static flex-col lg:flex-row lg:flex lg:space-x-6 text-white transition-all duration-[1s]">
+            <a href="iphone.html" class="px-5 rounded-sm lg:rounded-[0]  py-8 ml-2 text-xl transition-all duration-[.7s] hover:bg-amber-600 hover:translate-x-[1rem] active:scale-[1.03]">iphone</a>
+            <a href="airpods.html" class="px-5 rounded-sm lg:rounded-[0]  py-8 ml-2 text-xl transition-all duration-[.7s] hover:bg-amber-600 hover:translate-x-[1rem] active:scale-[1.03]">airpods</a>
+            <a href="watch.html" class="bg-amber-600 px-5 rounded-sm lg:rounded-[0]  py-8 ml-2 text-xl transition-all duration-[.7s] hover:bg-amber-600 hover:translate-x-[1rem] active:scale-[1.03]">apple watch</a>
+            <a href="airtag.html" class="px-5 rounded-sm lg:rounded-[0]  py-8 ml-2 text-xl transition-all duration-[.7s] hover:bg-amber-600 hover:translate-x-[1rem] active:scale-[1.03]">air tag</a>
+        </nav><!-- navBar -->
+        <a href="login.html" class=" lg:ml-5 px-4 py-1.5 text-xl  bg-amber-600  border-2 border-amber-600 rounded-4xl transition-all duration-[.7s] hover:bg-black hover:text-amber-600 font-bold" id="logIn">log in</a>
+        <a href="dashBoard.html" title="Profile Name" class="hidden font-bold sm:text-xl md:text-2xl uppercase lg:ml-5 border-x-2 px-2" id="account"></a>
+         <i class="fas fa-shopping-cart ml-3 text-3xl text-transparent bg-clip-text cursor-pointer bg-gradient-to-l to-amber-600 from-amber-100 relative" id="iconCard"> <span class="absolute top-[-10px] left-0 z-10 bg-red-600 w-6 h-6 rounded-full text-amber-50 text-xl font-bold text-center  " id="badge"> </span></i>
+         <div dir="auto" class="fixed overflow-auto h-auto max-h-[60vh] top-[50%] left-[50%] translate-[-50%] bg-white text-black text-center px-4 py-6 rounded-lg shadow-lg w-[70%] md:w-[40%] hidden" id="cartDropdown">
+           <h3 class="text-2xl text-amber-600 font-bold mb-2 ">عربة التسوق</h3>
+           <div id="viewProduct">
+            
+           </div>
+           <button class=" cursor-pointer mt-2 px-4 py-2  text-white rounded-lg bg-red-700 hover:opacity-[.9]" id="closeCard">إغلاق</button>
+           <button  class=" cursor-pointer mt-2 px-4 py-2 bg-black text-white rounded-lg hover:opacity-[.9]" id="showCardPage">عرض المنتجات</button>
+         </div>
+      </div><!-- parent -->
+    </div><!-- container -->
+  </header>
+  <!-- Main -->
+  <main class="iphone-bg content-center text-white mb-5">
+    <div class="content-center capitalize text-center container outline-5 outline-amber-600 rounded-[5px] w-[80%] mx-auto h-[65%]">
+      <!-- <h2 class="font-bold text-center text-3xl sm:text-5xl text-amber-600 border-b-4 pb-1 border-amber-50 w-[fit-content] mx-auto mb-3">badawey store</h2> -->
+      <h2 class="font-bold text-center text-3xl sm:text-5xl text-amber-600 w-[fit-content] mx-auto rounded-3xl p-4 bg-black animate-bounce">{apple watch}</h2>
+    </div>
+  </main>
+  <!--  -->
+      <section class="container mx-auto px-4">
+    <h1 class="text-4xl text-amber-600 font-bold text-center mb-7">كل ساعات ابل الأصلية</h1>
+    <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4" id="parentAirpods">
+
+    </div>
+  </section>
+
+    <!-- scroll to top -->
+    <button id="backTop"class="fixed bottom-6 right-6 bg-amber-600 text-white w-[45px] h-[45px] rounded-full shadow-lg border-3 border-white outline-4 outline-amber-600 transition-opacity hidden z-50 cursor-pointer">
+    <i class="fas fa-arrow-up text-2xl"></i>
+  </button>
+
+      <!-- fotter -->
+  <footer class="relative bg-black text-white mt-16 pt-16 pb-8 px-4 overflow-hidden">
+    <!-- style with svg -->
+    <div class="absolute top-0 left-0 w-full -translate-y-1">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-24">
+        <path fill="#f59e0b" fill-opacity="0.2" d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,53.3C672,53,768,75,864,80C960,85,1056,75,1152,69.3C1248,64,1344,64,1392,64L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+      </svg>
+    </div>
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <img src="img/logo.jpg" alt="Badawey Store" class="h-16 w-16 rounded-full border-4 border-amber-600 shadow-lg">
+        <span class="font-bold text-3xl text-amber-600 tracking-wide">Badawey Store</span>
+        <p class="text-gray-400 max-w-xs text-center md:text-left">كل منتجات أبل الأصلية مع ضمان معتمد وخدمة عملاء مميزة.</p>
+      </div>
+      <div class="flex flex-col items-center gap-6">
+        <h3 class="text-xl font-bold text-amber-600 mb-2">تواصل معنا</h3>
+        <div class="flex gap-6">
+          <a href="https://facebook.com" target="_blank" class="bg-amber-600 rounded-full w-13 h-13 text-center content-center hover:bg-white hover:text-amber-600 transition shadow-lg">
+            <i class="fab fa-facebook-f text-2xl"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="bg-amber-600 rounded-full w-13 h-13 text-center content-center hover:bg-white hover:text-amber-600 transition shadow-lg">
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a href="https://wa.me/" target="_blank" class="bg-amber-600 rounded-full w-13 h-13 text-center content-center hover:bg-white hover:text-amber-600 transition shadow-lg">
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="bg-amber-600 rounded-full w-13 h-13 text-center content-center hover:bg-white hover:text-amber-600 transition shadow-lg">
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <button id="logoutBtn" class="cursor-pointer text-white bg-amber-600  font-bold px-8 py-3 rounded-3xl text-xl hover:bg-white hover:text-amber-600 transition shadow-lg">Log Out</button>
+        <span class="text-gray-400 text-sm mt-2">&copy; 2025 Badawey Store. جميع الحقوق محفوظة.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/watch.js"></script>
+  <script src="js/default.js"></script>
+</body>
+</html>
+

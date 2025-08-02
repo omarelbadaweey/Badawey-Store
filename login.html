@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+  <title>Login || Page</title>
+  <!-- tailwindCss Files -->
+  <link href="src/input.css" rel="stylesheet">
+  <link href="src/output.css" rel="stylesheet">
+  <!-- icons Font Awesome File -->
+  <link href="src/all.css" rel="stylesheet">
+  <!-- icon Website image -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.jpg">
+</head>
+<body class="bg-body">
+  <!-- Main Section -->
+  <main class=" pt-7 min-h-[85vh] h-auto">
+    <h1 class=" text-center w-[fit-content] mx-auto text-white text-3xl shadow-2xl bg-amber-600 px-5 rounded-2xl shadow-amber-500 font-bold uppercase first-letter:text-red-700 first-letter:text-4xl">login</h1>
+    <div class="parent px-10 py-3 grid grid-cols-1 lg:grid-cols-2 "><!-- parent -->
+      <div class="text-content  text-2xl text-white lg:w-[80%] mx-auto ">
+        <img src="img/logo.jpg" alt="logo" class="w-[200px] text-center mx-auto rounded-2xl">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-[2rem] capitalize border-b-4 border-amber-600 w-[fit-content]  mx-auto pb-1 text-center lg:text-left">badawey store login page </h2>
+        <p class="text-center lg:text-left w-[90%] mx-auto"> We have a selection of the best products with a guarantee as well. Log in now to see our strongest and latest offers.</p>
+      </div><!-- text-content -->
+
+      <div class="form-content h-[350px] text-sm mt-10">
+        <h4 class="bg-amber-600 rounded-2xl py-2 lg:w-[70%] mx-auto mb-2 text-center text-white text-lg font-bold">Try it free 7 days then $20/mo. there after</h4>
+        <form class="bg-[aliceblue] lg:w-[70%] mx-auto rounded-xl p-3">
+          <input id="username" type="text" placeholder="User Name" class="block py-3 w-[100%] px-5 outline-amber-600 border my-2 rounded-2xl border-amber-700">
+          <div class="relative Divpass">
+            <input id="password" type="password" placeholder=" Password" class="py-3 w-[100%] px-5 outline-amber-600 border my-2 rounded-2xl border-amber-700 "> 
+            <i id="iconPassword" class="fa fa-eye-slash absolute top-5 right-3 text-xl text-amber-600 cursor-pointer"></i>
+          </div><!-- Divpass -->
+          <button id="loginBtn" class="block py-1 w-[100%] bg-amber-600 rounded-2xl text-lg text-white font-bold cursor-pointer capitalize">sign in your account</button>
+          <p class="text-md text-center mt-3">Don't have an account? <a href="reguster.html" class=" text-amber-600 hover:underline">Create account. </a></p>
+        </form>
+      </div><!-- form-content -->
+    </div><!-- parent -->
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="text-center content-center border-t-4 border-amber-600 h-[15vh] text-white shadow-2xl shadow-amber-600 text-lg md:text-xl lg:text-2xl font-bold mt-4 lg:mt-0">
+      &copy; 2025 <a href="index.html" class="text-amber-600 hover:underline capitalize">Badawey store</a> All Right Reserved 
+  </footer>
+   
+  <!-- Js File-->
+  <script src="js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>بيانات الشحن</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="src/input.css">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="stylesheet" href="src/all.css">
+</head>
+<body>
+    <section class="bg-gradient-to-br p-5 md:p-0 from-black via-gray-900 to-amber-50 min-h-screen flex items-center justify-center ">
+        <div class="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl p-0  overflow-hidden border border-amber-600">
+            <!-- رأس النموذج -->
+            <div class="bg-amber-600 flex items-center gap-3 px-8 py-6 relative">
+            <i class="fas fa-truck text-3xl text-white"></i>
+            <h2 class="text-2xl font-bold text-white">بيانات الشحن</h2>
+            <a href="javascript:history.back()" class="absolute left-5 bg-amber-600 text-white rounded-full shadow-lg px-5 py-2 flex content-center items-center gap-2 hover:bg-white hover:text-amber-600 transition z-50 border-2 border-amber-50"><i class="fas fa-arrow-right text-2xl"></i></a>
+
+            </div>
+            <!-- جسم النموذج -->
+            <form id="deliveryForm" class="p-8 flex flex-col gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                <label for="fullName" class="block mb-1 text-black font-semibold">الاسم بالكامل</label>
+                <input type="text" id="fullName" name="fullName" required autocomplete="name"
+                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-200 transition">
+                </div>
+                <div>
+                <label for="phone" class="block mb-1 text-black font-semibold">رقم الهاتف</label>
+                <input type="tel" id="phone" name="phone" required pattern="01[0-9]{9}" placeholder="مثال: 01012345678"
+                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-200 transition">
+                </div>
+                <div>
+                <label for="city" class="block mb-1 text-black font-semibold">المدينة</label>
+                <input type="text" id="city" name="city" required
+                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-200 transition">
+                </div>
+                <div>
+                <label for="postal" class="block mb-1 text-black font-semibold">الرمز البريدي (اختياري)</label>
+                <input type="text" id="postal" name="postal"
+                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-200 transition">
+                </div>
+            </div>
+            <div>
+                <label for="address" class="block mb-1 text-black font-semibold">العنوان التفصيلي</label>
+                <textarea id="address" name="address" required rows="3"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-200 transition"></textarea>
+            </div>
+            <button type="submit"
+                class="cursor-pointer bg-amber-600 text-white font-bold py-4 rounded-2xl text-xl hover:bg-black hover:text-amber-600 transition shadow-lg mt-2 flex items-center justify-center gap-2">
+                <i class="fas fa-check-circle text-2xl"></i>
+                تأكيد الطلب
+            </button>
+            </form>
+        </div>
+    </section>
+  <script>
+    document.getElementById('deliveryForm').onsubmit = function(e) {
+      e.preventDefault();
+      // هنا يمكنك إرسال البيانات لسيرفر أو تخزينها حسب مشروعك
+      alert('تم إرسال بيانات الشحن بنجاح! سيتم التواصل معك قريباً.');
+      this.reset();
+      location.href = 'index.html'; // إعادة التوجيه للصفحة الرئيسية بعد الإرسال
+      localStorage.removeItem("productInCart"); // مسح السلة بعد الإرسال
+    }
+  </script>
+</body>
+</html>

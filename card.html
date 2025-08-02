@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/input.css" rel="stylesheet">
+  <link href="src/output.css" rel="stylesheet">
+  <link href="src/all.css" rel="stylesheet">
+  <title>Badawey Store</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.jpg">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class=" h-[80px] bg-black sticky top-0 left-0 overflow-hidden z-[1000]">
+    <div class="container mx-auto capitalize text-white flex items-center justify-between w-[80%] h-[100%]">
+      <a href="index.html"><img src="img/logo.jpg" alt="" class="h-[80px]" title="Badawey Store"></a>
+      <h2 class=" text-xl md:text-3xl text-center  font-bold my-5"><i class=" fas fa-shopping-cart mr-2 text-3xl cursor-pointer text-amber-600 from-amber-100 relative" id="iconCard"> </i>عربة التسوق</h2>
+      <a href="javascript:history.back()" class="  bg-amber-600 text-white rounded-full shadow-lg px-5 py-2 flex content-center items-center gap-2 hover:bg-white hover:text-amber-600 transition z-50"><i class="fas fa-arrow-right text-2xl"></i></a>
+    </div><!-- container -->
+  </header>
+
+  <section>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-5" id="parentPhones">
+
+    </div>
+  </section>
+
+    <!-- scroll to top -->
+    <button id="backTop" class="fixed bottom-6 right-6 bg-amber-600 text-white w-[45px] h-[45px] rounded-full shadow-lg border-3 border-white outline-4 outline-amber-600  hidden z-50 cursor-pointer">
+    <i class="fas fa-arrow-up text-2xl"></i>
+  </button>
+    <!-- fotter -->
+  <footer class="fixed bottom-0 right-0 w-full py-3 text-xl font-bold bg-black text-white text-center flex justify-center items-center gap-3">
+    <a href="delivery.html" class=" bg-amber-600 px-3 rounded-3xl" id="buy">شراء</a>
+    <p> (<span class="text-amber-600" id="countProducts">0</span>) عدد المنتجات ف السله </p>
+  </footer>
+  <script src="js/card.js"></script>
+  <script src="js/default.js"></script>
+</body>
+</html>
