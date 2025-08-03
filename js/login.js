@@ -9,7 +9,7 @@ var GetPassword = localStorage.getItem("password");
 // validate form & save to values in LocalStorage
 loginBtn.addEventListener("click" , (e) =>{
     e.preventDefault()
-    if (username.value == "" || password.value == "" ){
+    if (username.value === "" || password.value === "" ){
         Swal.fire({
             title: "password or username is empty",
             icon: "error"
@@ -24,13 +24,12 @@ loginBtn.addEventListener("click" , (e) =>{
             setTimeout(() =>{
                 location = "index.html";
             },2000);
-        } else{
+        }  else if (username.value !== GetUser || password.value !== GetPassword) {
             Swal.fire({
                 title: "password or username is empty",
                 icon: "error"
             });
         }
-
     };
 });
 
